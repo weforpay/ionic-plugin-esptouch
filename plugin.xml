@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="ionic-plugin-esptouch"
+    version="2.2.1">
+    <name>esptouch</name>
+    <description>Ionic esptouch Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>Ionic,esptouch</keywords>
+    <repo></repo>
+    <issue></issue>
+
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/esptouch.js" name="esptouch">
+            <runs/>
+            <clobbers target="cordova.plugins.esptouch" />
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="esptouch">
+              <param name="android-package" value="com.weforpay.plugin.esptouch.EspTouch" />
+              <param name="onload" value="true" />
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+        </config-file>
+        <source-file src="src/android/EspTouch.java" 	target-dir="src/com/weforpay/plugin/esptouch" />
+
+		<source-file src="src/android/esptouch/EsptouchResult.java" 	target-dir="src/com/espressif/iot/esptouch" />
+        <source-file src="src/android/esptouch/EsptouchTask.java" 	target-dir="src/com/espressif/iot/esptouch" />
+        <source-file src="src/android/esptouch/IEsptouchListener.java" 	target-dir="src/com/espressif/iot/esptouch" />
+        <source-file src="src/android/esptouch/IEsptouchResult.java" 	target-dir="src/com/espressif/iot/esptouch" />
+        <source-file src="src/android/esptouch/IEsptouchTask.java" 	target-dir="src/com/espressif/iot/esptouch" />
+
+        <source-file src="src/android/esptouch/protocol/DataCode.java" 	target-dir="src/com/espressif/iot/esptouch/protocol" />
+        <source-file src="src/android/esptouch/protocol/DatumCode.java" 	target-dir="src/com/espressif/iot/esptouch/protocol" />
+        <source-file src="src/android/esptouch/protocol/EsptouchGenerator.java" 	target-dir="src/com/espressif/iot/esptouch/protocol" />
+        <source-file src="src/android/esptouch/protocol/GuideCode.java" 	target-dir="src/com/espressif/iot/esptouch/protocol" />
+
+		<source-file src="src/android/esptouch/task/__EsptouchTask.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+        <source-file src="src/android/esptouch/task/__IEsptouchTask.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+        <source-file src="src/android/esptouch/task/EsptouchTaskParameter.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+        <source-file src="src/android/esptouch/task/ICodeData.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+        <source-file src="src/android/esptouch/task/IEsptouchGenerator.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+		<source-file src="src/android/esptouch/task/IEsptouchTaskParameter.java" 	target-dir="src/com/espressif/iot/esptouch/task" />
+
+        <source-file src="src/android/esptouch/udp/UDPSocketClient.java" 	target-dir="src/com/espressif/iot/esptouch/udp" />
+        <source-file src="src/android/esptouch/udp/UDPSocketServer.java" 	target-dir="src/com/espressif/iot/esptouch/udp" />
+
+        <source-file src="src/android/esptouch/util/ByteUtil.java" 	target-dir="src/com/espressif/iot/esptouch/util" />
+        <source-file src="src/android/esptouch/util/CRC8.java" 	target-dir="src/com/espressif/iot/esptouch/util" />
+        <source-file src="src/android/esptouch/util/EspNetUtil.java" 	target-dir="src/com/espressif/iot/esptouch/util" />
+        
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+		
+        <js-module src="www/esptouch.js" name="esptouch">
+            <runs/>
+            <clobbers target="cordova.plugins.esptouch" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="esptouch">
+                <param name="ios-package" value="esptouch" onload="true" />
+            </feature>
+        </config-file>        
+    </platform>
+
+</plugin>
