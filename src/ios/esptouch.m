@@ -114,6 +114,12 @@
     });
 }
 
+-(void)cancel:(CDVInvokedUrlCommand *)command
+{
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:(CDVCommandStatus_OK)];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
 - (ESPTouchResult *) executeForResults
 {
     [self._condition lock];
