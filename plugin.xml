@@ -66,7 +66,36 @@
             <feature name="esptouch">
                 <param name="ios-package" value="esptouch" onload="true" />
             </feature>
-        </config-file>        
+        </config-file>
+        <header-file src="src/ios/esptouch.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESP_ByteUtil.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESP_ByteUtil.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESP_CRC8.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESP_CRC8.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESP_NetUtil.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESP_NetUtil.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPDataCode.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPDataCode.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPDatumCode.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPDatumCode.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPGuideCode.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPGuideCode.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPTouchGenerator.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPTouchGenerator.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPTouchResult.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPTouchResult.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPTouchTask.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPTouchTask.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPTouchTaskParameter.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPTouchTaskParameter.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPUDPSocketClient.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPUDPSocketClient.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPUDPSocketServer.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/ESPUDPSocketServer.m" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/IPAddress.h" target-dir="esptouch"/>
+        <source-file src="src/ios/esptouch/IPAddress.c" target-dir="esptouch"/>
+        <header-file src="src/ios/esptouch/ESPTouchDelegate.h" target-dir="esptouch"/>
     </platform>
 
 </plugin>
